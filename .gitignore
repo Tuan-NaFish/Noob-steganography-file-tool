@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.exe
+*.png
+*.rar
+*.zip
+temp/

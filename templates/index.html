@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyglot File Merger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center">
+    <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
+        <h1 class="text-3xl font-bold text-center mb-4">Polyglot File Merger</h1>
+        <p class="text-center text-gray-600 mb-6">Combine EXE, PNG, and RAR into a single file</p>
+
+        <!-- Alert -->
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 text-yellow-700 p-4 mb-6" role="alert">
+            <p class="font-medium">Lưu ý: Tệp đầu ra có thể bị trình duyệt hoặc Antivirus chặn do chứa mã thực thi ẩn.</p>
+        </div>
+
+        <form action="/merge" method="post" enctype="multipart/form-data">
+            <div class="mb-4">
+                <label for="exe_file" class="block text-gray-700 font-medium mb-2">Input File 1: Chọn file .exe</label>
+                <input type="file" id="exe_file" name="exe_file" accept=".exe"
+                       class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="png_file" class="block text-gray-700 font-medium mb-2">Input File 2: Chọn file .png</label>
+                <input type="file" id="png_file" name="png_file" accept=".png"
+                       class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="rar_file" class="block text-gray-700 font-medium mb-2">Input File 3: Chọn file .rar hoặc .zip</label>
+                <input type="file" id="rar_file" name="rar_file" accept=".rar, .zip"
+                       class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-6">
+                <label for="output_filename" class="block text-gray-700 font-medium mb-2">Tên file đầu ra (Ví dụ: final_output.png)</label>
+                <input type="text" id="output_filename" name="output_filename"
+                       class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                       placeholder="Nhập tên file đầu ra">
+            </div>
+
+            <button type="submit"
+                    class="w-full bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 transition-colors">
+                Merge Files
+            </button>
+        </form>
+    </div>
+</body>
+</html>
