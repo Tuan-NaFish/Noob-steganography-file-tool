@@ -1,54 +1,71 @@
 # Polyglot File Merger
 
-Một ứng dụng web nội bộ bằng Flask để ghép 3 file (exe, png, rar/zip) thành một file duyệt theo thứ tự nhị phân: EXE -> PNG -> RAR.
+An internal web application using Flask to merge three files (exe, png, rar/zip) into a single file that is browsed in binary order: EXE -> PNG -> RAR.
 
-## Yêu cầu
+## Requirements
 
 - Python 3.x
+
 - pip
 
-## Cài đặt
+## Installation
 
-1. Clone hoặc tải xuống mã nguồn này.
-2. Điều hướng đến thư mục dự án.
-3. Cài đặt các phụ thuộc:
+1. Clone or download this source code.
+
+2. Navigate to the project directory.
+
+3. Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Chạy ứng dụng
+## Running the application
 
 ```bash
 python app.py
 ```
 
-Ứng dụng sẽ chạy tại `http://127.0.0.1:5000`.
+The application will run at `http://127.0.0.1:5000`.
 
-## Sử dụng
+## Usage
 
-1. Mở trình duyệt và truy cập `http://127.0.0.1:5000`.
-2. Chọn file .exe, file .png và file .rar hoặc .zip.
-3. Nhập tên file đầu ra (ví dụ: `final_output.png`).
-4. Nhấn nút "Merge Files".
-5. Tệp đã ghép sẽ được tự động tải xuống.
+1. Open your browser and access `http://127.0.0.1:5000`.
 
-## Lưu ý
+2. Select the .exe file, .png file, and .rar or .zip file.
 
-- Tệp đầu ra có thể bị trình duyệt hoặc phần mềm antivirus chặn vì chứa mã thực thi ẩn.
-- Ứng dụng này chỉ dành cho mục đích giáo dục và thử nghiệm nội bộ.
+3. Enter the output file name (e.g., `final_output.png`).
 
-## Cấu trúc thư mục
+4. Click the "Merge Files" button.
+
+5. The merged file will be automatically downloaded.
+
+## Note
+
+- The output file may be blocked by browsers or antivirus software because it contains hidden executable code.
+
+- This application is for educational and internal testing purposes only.
+
+## Folder Structure
 
 ```
-.
+
 ├── app.py
+
 ├── requirements.txt
+
 ├── README.md
+
 └── templates
-    └── index.html
+
+└── index.html
 ```
 
-## Giấy phép
+## License
 
 Este proyecto está bajo la Licencia MIT.
+
+
+
+
+FOR EDUCATIONAL PURPOSE ONLY.
